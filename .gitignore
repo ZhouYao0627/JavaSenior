@@ -1,0 +1,4 @@
+# Project exclude paths
+/day05/.gradle/
+/myproject03/bin/
+/out/

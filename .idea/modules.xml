@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaSenior.iml" filepath="$PROJECT_DIR$/JavaSenior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/LeetCode/LeetCode.iml" filepath="$PROJECT_DIR$/LeetCode/LeetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyTest_Nothing/MyTest_Nothing.iml" filepath="$PROJECT_DIR$/MyTest_Nothing/MyTest_Nothing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Nothing/Nothing.iml" filepath="$PROJECT_DIR$/Nothing/Nothing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day01/day01.iml" filepath="$PROJECT_DIR$/day01/day01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day02/day02.iml" filepath="$PROJECT_DIR$/day02/day02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day03/day03.iml" filepath="$PROJECT_DIR$/day03/day03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day04/day04.iml" filepath="$PROJECT_DIR$/day04/day04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05/day05.iml" filepath="$PROJECT_DIR$/day05/day05.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06/day06.iml" filepath="$PROJECT_DIR$/day06/day06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day07/day07.iml" filepath="$PROJECT_DIR$/day07/day07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08/day08.iml" filepath="$PROJECT_DIR$/day08/day08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day09/day09.iml" filepath="$PROJECT_DIR$/day09/day09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day10/day10.iml" filepath="$PROJECT_DIR$/day10/day10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day11/day11.iml" filepath="$PROJECT_DIR$/day11/day11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day12/day12.iml" filepath="$PROJECT_DIR$/day12/day12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_Project02/eclipse_Project02.iml" filepath="$PROJECT_DIR$/eclipse_Project02/eclipse_Project02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_Project03/eclipse_Project03.iml" filepath="$PROJECT_DIR$/eclipse_Project03/eclipse_Project03.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day06/eclipse_day06.iml" filepath="$PROJECT_DIR$/eclipse_day06/eclipse_day06.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day07/eclipse_day07.iml" filepath="$PROJECT_DIR$/eclipse_day07/eclipse_day07.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day08/eclipse_day08.iml" filepath="$PROJECT_DIR$/eclipse_day08/eclipse_day08.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day09/eclipse_day09.iml" filepath="$PROJECT_DIR$/eclipse_day09/eclipse_day09.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day10/eclipse_day10.iml" filepath="$PROJECT_DIR$/eclipse_day10/eclipse_day10.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day11/eclipse_day11.iml" filepath="$PROJECT_DIR$/eclipse_day11/eclipse_day11.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day12/eclipse_day12.iml" filepath="$PROJECT_DIR$/eclipse_day12/eclipse_day12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day13/eclipse_day13.iml" filepath="$PROJECT_DIR$/eclipse_day13/eclipse_day13.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eclipse_day14/eclipse_day14.iml" filepath="$PROJECT_DIR$/eclipse_day14/eclipse_day14.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jdbc0419/jdbc0419.iml" filepath="$PROJECT_DIR$/jdbc0419/jdbc0419.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject02/myproject02.iml" filepath="$PROJECT_DIR$/myproject02/myproject02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myproject03/myproject03.iml" filepath="$PROJECT_DIR$/myproject03/myproject03.iml" />
+    </modules>
+  </component>
+</project>
