@@ -1,6 +1,6 @@
 ﻿package com.atguigu.p2;
 
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * CMUtility工具类： 将不同的功能封装为方法，就是可以直接通过调用方法使用它的功能，而无需考虑具体的功能实现细节。
@@ -126,7 +126,7 @@ public class CMUtility {
                     continue;
             }
 
-            if (line.length() < 1 || line.length() > limit) { // 即输入不能为空且输入不能大于limit
+            if (line.length() > limit) { // 我删除了一些 // 即输入不能为空且输入不能大于limit
                 System.out.print("输入长度（不大于" + limit + "）错误，请重新输入：");
                 continue;
             }
