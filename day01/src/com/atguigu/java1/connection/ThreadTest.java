@@ -6,7 +6,7 @@ package com.atguigu.java1.connection;
  * 2.重写Thread类的run() --->将此线程执行的操作声明在run()中
  * 3.创建Thread类的子类对象
  * 4.通过此对象调用start()
- * <p>
+ *
  * 例子：遍历100以内的所有的偶数
  *
  * @author：ZhouYao

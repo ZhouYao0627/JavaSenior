@@ -13,15 +13,15 @@ package com.atguigu.java1.connection;
 class Window2 extends Thread {
     private static int ticket = 100;
 
-    private static Object obj = new Object();
+//    private static Object obj = new Object();
 
     @Override
     public void run() {
         while (true) {
-            // 正确的
+            // 正确的方式
 //            synchronized(obj) {
-            synchronized (Window2.class) { // Class clazz = Window2.class,Window2.class只会加载一次
-                // 错误的方式：此时的this代表着t1,t2,t3三个对象
+            synchronized (Window2.class) { // Class clazz = Window2.class，Window2.class只会加载一次 ---> 看反射
+                // 错误的方式：此时的this代表着t1,t2,t3三个对象(也就是锁不唯一了)
                 // synchronized(this) {
 
                 if (ticket > 0) {

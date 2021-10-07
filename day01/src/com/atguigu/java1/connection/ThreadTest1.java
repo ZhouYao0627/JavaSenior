@@ -8,7 +8,6 @@ package com.atguigu.java1.connection;
  * 4.将此对象作为参数传递到Thread类的构造器中，创建Thread类的对象
  * 5.通过Thread类的对象调用start()
  *
- *
  * 比较创建线程的两种方式：
  * 开发中：优先选择：实现Runnable接口的方式
  * 原因：1.实现的方式没有类的单继承性的局限性
@@ -23,6 +22,7 @@ package com.atguigu.java1.connection;
 
 // 1.创建一个实现了Runnable接口的类
 class MThread implements Runnable {
+
     // 2.实现类去实现Runnable中的抽象方法：run()
     @Override
     public void run() {
@@ -41,7 +41,7 @@ public class ThreadTest1 {
         // 4.将此对象作为参数传递到Thread类的构造器中，创建Thread类的对象
         Thread t1 = new Thread(mThread);
         t1.setName("线程1");
-        // 5.通过Thread类的对象调用start():① 启动线程 ② 调用当前线程的run()--->调用了Runnable类型的tqrget的run()
+        // 5.通过Thread类的对象调用start():① 启动线程 ② 调用当前线程的run()--->调用了Runnable类型的target的run()
         t1.start();
 
         // 再启动一个线程，遍历100以内的偶数

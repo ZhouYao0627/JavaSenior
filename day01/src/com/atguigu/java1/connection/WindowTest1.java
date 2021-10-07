@@ -26,7 +26,7 @@ class Window1 implements Runnable {
 
 public class WindowTest1 {
     public static void main(String[] args) {
-        Window1 w = new Window1(); // 这相当于一个对象，三个线程
+        Window1 w = new Window1(); // 这相当于一个对象，三个线程，所以上方的ticket就不需要加static了
 
         Thread t1 = new Thread(w);
         Thread t2 = new Thread(w);

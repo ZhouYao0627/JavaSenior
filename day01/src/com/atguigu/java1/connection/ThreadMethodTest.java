@@ -12,8 +12,7 @@ package com.atguigu.java1.connection;
  * 8.stop:已过时。当执行此方法时，强制结束当前线程
  * 9.sleep(long millitime):让当前线程“睡眠”指定的millitime毫秒。在指定的millitime毫秒的时间内，当前线程是阻塞状态
  * 10.isAlive():判断当前线程是否存活
- * <p>
- * <p>
+ *
  * 线程的优先级：
  * 1.
  * MAX_PRIORITY 10
@@ -22,7 +21,7 @@ package com.atguigu.java1.connection;
  * 2.如何获取和设置当前线程的优先级：
  * setPriority():获取线程的优先级
  * getPriority(int p):设置线程的优先级
- * <p>
+ *
  * 说明：高优先级的线程要抢占低优先级线程cpu的执行权。但是只是从概率上讲，高优先级的线程在高概率的情况下被执行，
  * 并不意味着只有当高优先级的线程执行完低优先级的线程才执行。
  *

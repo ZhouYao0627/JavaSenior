@@ -17,8 +17,8 @@ class Window3 implements Runnable {
 
     @Override
     public void run() {
-        while (true) {
-            show();
+        while (true) {  // 这里是死循环，自己可编写出循环的语句
+            show();  // 将原本代码抽出构造一个方法，将其设计为同步方法
         }
     }
 

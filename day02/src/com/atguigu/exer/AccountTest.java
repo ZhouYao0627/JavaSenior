@@ -3,7 +3,7 @@ package com.atguigu.exer;
 /**
  * 银行有[一个账户]。
  * 有[两个储户]分别向同一个账户存3000元，每次存1000存3次 。每次存完打印账户[余额]。
- * <p>
+ *
  * 分析：
  * 1.是否是多线程问题？ 是，两个储户线程
  * 2.是否有共享数据？ 有，账户(或账户余额)
@@ -23,7 +23,7 @@ class Account {
     }
 
     // 存钱
-    public synchronized void deposit(double amt) {
+    public synchronized void deposit(double amt) { // 这里使用synchronized没有问题的原因是下方只创建了一个acct，即多个线程共用了一个this
         if (amt > 0) {
             balance += amt;
 
@@ -67,6 +67,20 @@ public class AccountTest {
 
         c1.start();
         c2.start();
+
+        // 下方是我将extends Thread改为implements Runnable，不知是否正确
+//        Account acct = new Account(0);
+//
+//        Customer c = new Customer(acct);
+//
+//        Thread thread1 = new Thread(c);
+//        Thread thread2 = new Thread(c);
+//
+//        thread1.setName("甲");
+//        thread2.setName("乙");
+//
+//        thread1.start();
+//        thread2.start();
     }
 
 }

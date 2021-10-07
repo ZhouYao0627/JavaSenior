@@ -23,7 +23,7 @@ class Window implements Runnable {
 
     private int ticket = 100;
     // 1.实例化ReentrantLock
-    private ReentrantLock lock = new ReentrantLock();
+    private ReentrantLock lock = new ReentrantLock();  //若Window类不是实现Runnable，而是继承Thread，就需要在此行加static，否则下面的lock.lock等会错
 
     @Override
     public void run() {

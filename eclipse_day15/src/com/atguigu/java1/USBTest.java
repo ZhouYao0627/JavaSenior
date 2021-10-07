@@ -4,7 +4,7 @@ package com.atguigu.java1;
  * @author：ZhouYao
  * @create：2021-09-28 15:50
  * <p>
- * 还可看java里的PersonTest
+ * 关于匿名的相关知识还可看java里的PersonTest
  */
 public class USBTest {
     public static void main(String[] args) {
@@ -27,7 +27,7 @@ public class USBTest {
 
             @Override
             public void stop() {
-                System.out.println("数据结束工作");
+                System.out.println("手机结束工作");
             }
         };
 

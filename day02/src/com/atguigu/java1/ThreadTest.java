@@ -27,6 +27,12 @@ public class ThreadTest {
                     s1.append("a");
                     s2.append("1");
 
+//                    try {
+//                        Thread.sleep(100);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
+
                     synchronized (s2) {
                         s1.append("b");
                         s2.append("2");
@@ -44,6 +50,12 @@ public class ThreadTest {
                 synchronized (s2) {
                     s1.append("c");
                     s2.append("3");
+
+//                    try {
+//                        Thread.sleep(100);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
 
                     synchronized (s1) {
                         s1.append("d");

@@ -13,14 +13,14 @@ import java.util.concurrent.locks.ReentrantLock;
  * 说明：
  * 1.wait()，notify()，notifyAll()三个方法必须使用在同步代码块或同步方法中
  * 2.wait()，notify()，notifyAll()三个方法的调用者必须是同步代码块或同步方法中的同步监视器，
- *   否则会出现IllegalMonitorStateException异常
+ *                               否则会出现IllegalMonitorStateException异常
  * 3.wait()，notify()，notifyAll()三个方法是定义在java.lang.object类中
  *
  * 面试题：sleep()和wait()的异同？
  * 1.相同点：一旦执行此方法，都可以使得当前的线程进入阻塞状态
  * 2.不同点：(1)两个方法声明的位置不同：Thread类中声明sleep(),Object类中声明wait()
- *          (2)调用的位置不同：sleep()可以在如何需要的场景下调用。wait()必须使用在同步代码块或同步方法中
- *          (3)关于是否释放同步监视器：如果两个方法都是使用在同步代码块或同步方法中，sleep()不会是否锁，wait()会释放锁。
+ *          (2)调用的位置不同：sleep()可以在任何需要的场景下调用。wait()必须使用在同步代码块或同步方法中
+ *          (3)关于是否释放同步监视器：如果两个方法都是使用在同步代码块或同步方法中，sleep()不会释放锁，wait()会释放锁。
  *
  * @author：ZhouYao
  * @create：2021-07-05 20:54
@@ -38,22 +38,22 @@ class Number implements Runnable {
         while (true) {
             synchronized (obj) {
 
-                obj.notify();
+                obj.notify(); // 唤醒
 
                 if (number <= 100) {
 
-                    try {
-                        Thread.sleep(10);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
+//                    try {
+//                        Thread.sleep(10);
+//                    } catch (InterruptedException e) {
+//                        e.printStackTrace();
+//                    }
 
                     System.out.println(Thread.currentThread().getName() + ":" + number);
                     number ++;
 
                     // 使得调用如下wait()方法的线程进入阻塞状态
                     try {
-                        obj.wait();
+                        obj.wait(); // wait()会自动释放锁
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -80,8 +80,6 @@ public class CommunicationTest {
         t1.start();
         t2.start();
     }
-
-
 }
 
 //public void run() {

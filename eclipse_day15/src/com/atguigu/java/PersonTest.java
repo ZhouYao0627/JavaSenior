@@ -7,7 +7,7 @@ package com.atguigu.java;
 
 /*
  * 抽象类的匿名子类
- * 还可看java1里的USBTest
+ * 关于匿名的相关知识还可看java1里的USBTest
  */
 public class PersonTest {
     public static void main(String[] args) {

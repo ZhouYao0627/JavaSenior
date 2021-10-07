@@ -11,8 +11,7 @@ class Window4 extends Thread {
 
     @Override
     public void run() {
-        while (true) {
-
+        while (true) { // 这里是死循环，自己可编写出循环的语句
             show();
         }
     }
@@ -35,7 +34,6 @@ class Window4 extends Thread {
     public Window4(String name) {
         super(name);
     }
-
 }
 
 public class WindowTest4 {
@@ -48,7 +46,6 @@ public class WindowTest4 {
         t1.start();
         t2.start();
         t3.start();
-
     }
 
 }
