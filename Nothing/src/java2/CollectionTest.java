@@ -1,4 +1,4 @@
-package com.atguigu.java2;
+package java2;
 
 import org.junit.Test;
 
@@ -66,7 +66,7 @@ public class CollectionTest {
         // 1.add(Object e)：将元素e添加到集合coll中
         coll.add("AA");
         coll.add("BB");
-        coll.add(123); // 自动装箱
+        coll.add(123);
         coll.add(new Date());
 
         // 2.size()：获取添加的元素的个数
@@ -87,7 +87,13 @@ public class CollectionTest {
 
         // 5.isEmpty()：判断当前集合是否为空
         System.out.println(coll.isEmpty());
+
+
     }
+
+
+
+
 
 }
 

@@ -1,4 +1,4 @@
-package com.atguigu.java2;
+package java2;
 
 import org.junit.Test;
 
@@ -74,7 +74,7 @@ public class CollectionTest {
 
         Collection coll1 = new ArrayList();
 
-        // 3.addAll(COllection coll1)：将coll1集合中的元素添加到当前的集合中
+        // 3.addAll(Collection coll1)：将coll1集合中的元素添加到当前的集合中
         coll1.add(456);
         coll1.add("CC");
         coll.addAll(coll1);
@@ -88,6 +88,7 @@ public class CollectionTest {
         // 5.isEmpty()：判断当前集合是否为空
         System.out.println(coll.isEmpty());
     }
+
 
 }
 

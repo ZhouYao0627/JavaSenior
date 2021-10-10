@@ -1,4 +1,4 @@
-package String;
+package com.atguigu.java;
 
 import org.junit.Test;
 
@@ -9,7 +9,7 @@ import java.util.Arrays;
  * 涉及到String类与其他结构之间的转换
  *
  * @author：ZhouYao
- * @create：2021-07-19 11:56
+ * @create：2021-07-10 21:50
  */
 public class StringTest1 {
 
@@ -56,7 +56,7 @@ public class StringTest1 {
         String str1 = "abc123";
         char[] charArray = str1.toCharArray();
         for (int i = 0; i < charArray.length; i++) {
-            System.out.print(charArray[i] + " ");
+            System.out.println(charArray[i]);
         }
 
         char[] arr = {'h', 'e', 'l', 'l', 'o'};
@@ -70,6 +70,7 @@ public class StringTest1 {
 
     String --> 基本数据类型、包装类：调用包装类的静态方法：parseXxx(str)
     基本数据类型、包装类 --> String:调用String重载的valueOf(xxx)
+
      */
 
     @Test

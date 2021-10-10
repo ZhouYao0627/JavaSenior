@@ -49,7 +49,6 @@ public class WrapperTest {
 
     /*
      * JDK 5.0新特性：自动装箱与自动拆箱
-     *
      */
 
     @Test
@@ -70,9 +69,8 @@ public class WrapperTest {
         System.out.println(in1.toString()); // 10
 
         int num3 = in1; // 自动拆箱
-
     }
-//
+
 //	public void method(Object obj) {
 //		System.out.println(obj);
 //	}

@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
 /**
- * 创建线程的方式三：实现Callable接口   --->JDK5.0新增
+ * 创建线程的方式三：实现Callable接口   --->JDK5.0新增   ---> 详细步骤先下方代码
  *
  * 如何理解实现Callable接口的方式创建多线程比实现实现Runnable接口创建多线程方式强大？
  * 1.call()是可以有返回值的
@@ -35,8 +35,10 @@ public class ThreadNew {
     public static void main(String[] args) {
         //3.创建Callable接口实现类的对象
         NumThread numThread = new NumThread();
+
         //4.将此Callable接口实现类的对象作为参数传递到FutureTask构造器中，创建FutureTask的对象
         FutureTask futureTask = new FutureTask(numThread);
+
         //5.将FutureTask的对象作为参数传递到Thread类的构造器中，创建Thread对象，并调用start() --->若用不到返回值则这一步就结束了
         new Thread(futureTask).start();
 
