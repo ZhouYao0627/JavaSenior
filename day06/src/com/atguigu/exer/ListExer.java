@@ -25,7 +25,7 @@ public class ListExer {
     }
 
     private void updateList(List list) {
-//        list.remove(2); // ---> 删的是索引位置上的
+        list.remove(2); // ---> 删的是索引位置上的
         list.remove(new Integer(2)); // ---> 删的是对象
     }
 

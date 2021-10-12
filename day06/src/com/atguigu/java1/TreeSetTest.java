@@ -14,7 +14,6 @@ public class TreeSetTest {
     /*
     1.向TreeSet中添加的数据，要求是[相同类]的对象。
     2.两种排序方式：自然排序（实现Comparable接口） 和 定制排序（Comparator）
-
     3.自然排序中，比较两个对象是否相同的标准为：compareTo()返回0.不再是equals().
     4.定制排序中，比较两个对象是否相同的标准为：compare()返回0.不再是equals().
     */

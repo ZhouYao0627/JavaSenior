@@ -27,6 +27,7 @@ import java.util.List;
  *      默认情况下，扩容为原来的容量的1.5倍，同时需要将原有数组中的数据复制到新的数组中。
  *
  *      结论：建议开发中使用带参的构造器：ArrayList list = new ArrayList(int capacity)
+ *           ---> 即：若确定了容量，则推荐使用带参的构造器，可以避免在中间环节扩容，提高效率
  *
  *   2.2 jdk 8中ArrayList的变化：
  *      ArrayList list = new ArrayList(); // 底层Object[] elementData初始化为{}.并没有创建长度为10的数组
@@ -34,11 +35,12 @@ import java.util.List;
  *      list.add(123); // 第一次调用add()时，底层才创建了长度10的数组，并将数据123添加到elementData[0]
  *      ...
  *      后续的添加和扩容操作与jdk 7无异。
- *   2.3 小结：jdk7中的ArrayList的对象的创建类似于单例的饿汉式，
+ *
+ *   2.3 小结：jdk7中的ArrayList的对象的创建类似于单例的饿汉式。
  *            jdk8中的ArrayList的对象的创建类似于单例的懒汉式，延迟了数组的创建，节省内存。
  *
  *   3. LinkedList的源码分析：
- *      LinkedList list = new LinkedList(); 内部声明了Node类型的first和last属性，默认值为null
+ *      LinkedList list = new LinkedList(); // 内部声明了Node类型的first和last属性，默认值为null
  *      list.add(123); // 将123封装到Node中，创建了Node对象。
  *
  *      其中，Node定义为：体现了LinkedList的双向链表的说法
@@ -78,8 +80,8 @@ public class ListTest {
     8.List subList(int fromIndex, int toIndex):返回从fromIndex到toIndex位置的左闭右开区间的子集合
 
     总结：常用方法
-    增：add(Object obj)
-    删：remove(int index) / remove(Object obj)
+    增：add(Object obj)  ---> 向末尾添加
+    删：remove(int index) / remove(Object obj)  ---> list里和coll里
     改：set(int index, Object ele)
     查：get(int index)
     插：add(int index, Object ele)
