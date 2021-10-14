@@ -7,7 +7,7 @@ import java.util.*;
 /**
  *  一、Map的实现类的结构：
  *  |----Map:双列数据，存储key-value对的数据   ---类似于高中的函数：y = f(x)
- *         |----HashMap:作为Map的主要实现类；线程不安全的，效率高；存储null的key和value
+ *         |----HashMap:作为Map的主要实现类；线程不安全的，效率高；可以存储null的key和value
  *              |----LinkedHashMap:保证在遍历map元素时，可以按照添加的顺序实现遍历。
  *                      原因：在原有的HashMap底层结构基础上，添加了一对指针，指向前一个和后一个元素。
  *                      对于频繁的遍历操作，此类执行效率高于HashMap。
@@ -82,6 +82,7 @@ import java.util.*;
      void putAll(Map m):将m中的所有key-value对存放到当前map中
      Object remove(Object key)：移除指定key的key-value对，并返回value
      void clear()：清空当前map中的所有数据
+
      元素查询的操作：
      Object get(Object key)：获取指定key对应的value
      boolean containsKey(Object key)：是否包含指定的key
@@ -89,6 +90,7 @@ import java.util.*;
      int size()：返回map中key-value对的个数
      boolean isEmpty()：判断当前map是否为空
      boolean equals(Object obj)：判断当前map和参数对象obj是否相等
+
      元视图操作的方法：
      Set keySet()：返回所有key构成的Set集合
      Collection values()：返回所有value构成的Collection集合
