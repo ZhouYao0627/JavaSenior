@@ -9,7 +9,7 @@ import java.util.List;
 
 /**
  * Collections:操作Collection、Map的工具类
- * <p>
+ *
  * 面试题：Collection 和 Collections的区别？
  *
  * @author：ZhouYao

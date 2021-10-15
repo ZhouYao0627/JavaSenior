@@ -43,7 +43,8 @@ import java.util.*;
  *      如果此位置上的数据不为空，(意味着此位置上存在一个或多个数据(以链表形式存在)),比较key1和已经存在的一个或多个数据
  *      的哈希值：
  *              如果key1的哈希值与已经存在的数据的哈希值都不相同，此时key1-value1添加成功。--->情况2
- *              如果key1的哈希值和已经存在的某一个数据(key2-value2)的哈希值相同，继续比较：调用key1所在类的equals(key2)方法，比较：
+ *              如果key1的哈希值和已经存在的某一个数据(key2-value2)的哈希值相同，继续比较：调用key1所在类的equals(key2)方法，
+ *              比较：
  *                      如果equals()返回false:此时key1-value1添加成功。--->情况3
  *                      如果equals()返回true:使用value1替换value2。
  *
@@ -59,7 +60,7 @@ import java.util.*;
  *      4. jdk7底层结构只有：数组+链表。jdk8中底层结构：数组+链表+红黑树。
  *         4.1 形成链表时，七上八下（jdk7:新的元素指向旧的元素。jdk8：旧的元素指向新的元素）
  *         4.2 当数组的某一个索引位置上的元素以链表形式存在的数据个数 > 8 且当前数组的长度 > 64时，
- *             此时此索引位置上的所数据改为使用红黑树存储。
+ *             此时此索引位置上的所数据改为使用红黑树存储。 ---> (更有效率)
  *
  *      DEFAULT_INITIAL_CAPACITY：HashMap的默认容量，16
  *      DEFAULT_LOAD_FACTOR：HashMap的默认加载因子：0.75
@@ -242,6 +243,7 @@ public class MapTest {
     @Test
     public void test2(){
         HashMap map = new HashMap();
+        map = new LinkedHashMap();
         map.put(123,"AA");
         map.put(345,"BB");
         map.put(12,"CC");

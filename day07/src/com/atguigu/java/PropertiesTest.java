@@ -10,7 +10,7 @@ import java.util.Properties;
  */
 public class PropertiesTest {
 
-    //Properties:常用来处理配置文件。key和value都是String类型
+    // Properties:常用来处理配置文件。key和value都是String类型
     public static void main(String[] args) {
 
         FileInputStream fis = null;

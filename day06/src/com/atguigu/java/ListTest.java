@@ -81,7 +81,7 @@ public class ListTest {
 
     总结：常用方法
     增：add(Object obj)  ---> 向末尾添加
-    删：remove(int index) / remove(Object obj)  ---> list里和coll里
+    删：remove(int index) / remove(Object obj)  ---> 分别是：list里和coll里
     改：set(int index, Object ele)
     查：get(int index)
     插：add(int index, Object ele)
