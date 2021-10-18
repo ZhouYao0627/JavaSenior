@@ -1,4 +1,4 @@
-package com.atguigu.exer;
+package test;
 
 import org.junit.Test;
 
@@ -8,39 +8,21 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * 练习3:获取文本上字符出现的次数,把数据写入文件
- *
- * 思路：
- * 1.遍历文本每一个字符
- * 2.字符出现的次数存在Map中
- *
- * Map<Character,Integer> map = new HashMap<Character,Integer>();
- * map.put('a',18);
- * map.put('你',2);
- *
- * 3.把map中的数据写入文件
- *
- * @author：ZhouYao
- * @create：2021-07-20 10:49
+ @author：ZhouYao
+ @create：2021-10-18 19:08
  */
-public class WordCount {
-    /*
-    说明：如果使用单元测试，文件相对路径为当前module
-    如果使用main()测试，文件相对路径为当前工程
-    */
+public class WordCount1 {
+
     @Test
-    public void testWordCount() throws IOException {
+    public void test() throws IOException {
 
-        // 1.创建Map集合
-        Map<Character, Integer> map = new HashMap<>();
+        HashMap<Character, Integer> map = new HashMap<>();
 
-        // 2.遍历每一个字符,每一个字符出现的次数放到map中
         FileReader fr = new FileReader("dbcp.txt");
+
         int c = 0;
         while ((c = fr.read()) != -1) {
-            // int 还原 char
             char ch = (char) c;
-            // 判断char是否在map中第一次出现
             if (map.get(ch) == null) {
                 map.put(ch, 1);
             } else {
@@ -48,11 +30,10 @@ public class WordCount {
             }
         }
 
-        // 3.把map中数据存在文件count.txt
-        // 3.1 创建Writer
         BufferedWriter bw = new BufferedWriter(new FileWriter("count.txt"));
-        // 3.2 遍历map,再写入数据
+
         Set<Map.Entry<Character, Integer>> entrySet = map.entrySet();
+
         for (Map.Entry<Character, Integer> entry : entrySet) {
             switch (entry.getKey()) {
                 case ' ':
@@ -74,10 +55,7 @@ public class WordCount {
             bw.newLine();
         }
 
-        // 4.关流
-        fr.close();
         bw.close();
+        fr.close();
     }
-
-
 }

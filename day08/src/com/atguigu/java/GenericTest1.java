@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * 如何自定义泛型结构：泛型类、泛型接口；泛型方法。
- * <p>
+ *
  * 1. 关于自定义泛型类、泛型接口：
  *
  * @author：ZhouYao

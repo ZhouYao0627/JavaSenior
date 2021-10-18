@@ -6,16 +6,16 @@ import java.io.*;
 
 /**
  * 处理流之一：缓冲流的使用
- * <p>
+ *
  * 1.缓冲流：
  * BufferedInputStream
  * BufferedOutputStream
  * BufferedReader
  * BufferedWriter
- * <p>
+ *
  * 2.作用：提供流的读取、写入的速度
  * 提高读写速度的原因：内部提供了一个缓冲区
- * <p>
+ *
  * 3. 处理流，就是“套接”在已有的流的基础上。
  *
  * @author：ZhouYao

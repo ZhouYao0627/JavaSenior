@@ -9,19 +9,23 @@ import java.io.*;
  * 1.操作数据单位：字节流、字符流
  * 2.数据的流向：输入流、输出流
  * 3.流的角色：节点流、处理流
- * <p>
+ *
  * 二、流的体系结构
  * 抽象基类         节点流（或文件流）                               缓冲流（处理流的一种）
  * InputStream     FileInputStream   (read(byte[] buffer))        BufferedInputStream (read(byte[] buffer))
  * OutputStream    FileOutputStream  (write(byte[] buffer,0,len)  BufferedOutputStream (write(byte[] buffer,0,len) / flush()
  * Reader          FileReader (read(char[] cbuf))                 BufferedReader (read(char[] cbuf) / readLine())
  * Writer          FileWriter (write(char[] cbuf,0,len)           BufferedWriter (write(char[] cbuf,0,len) / flush()
- * <p>
+ *
  * 大体操作可分为这几步：
  * 1.File类的实例化
  * 2.流的实例化
  * 3.读入/写出的操作
  * 4.资源的关闭
+ *
+ * 结论：
+ * 1.对于文本文件(.txt,.java,.c,.cpp)，使用[字符流]处理
+ * 2.对于非文本文件(.jpg,.mp3,.mp4,.avi,.doc,.ppt,...)，使用[字节流]处理
  *
  * @author：ZhouYao
  * @create：2021-07-19 10:39
@@ -45,7 +49,7 @@ public class FileReaderWriterTest {
    3.读入的文件一定要存在，否则就会报FileNotFoundException。
    */
     @Test
-    public void testFileReader() throws IOException {
+    public void testFileReader() throws IOException { // 实现读取操作
         FileReader fr = null;
         try {
             // 1.实例化File类的对象，指明要操作的文件
@@ -66,7 +70,7 @@ public class FileReaderWriterTest {
             // 方式二：语法上针对于方式一的修改
             int data;
             while ((data = fr.read()) != -1) {
-                System.out.println((char) data);
+                System.out.print((char) data);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -80,7 +84,7 @@ public class FileReaderWriterTest {
 
     //对read()操作升级：使用read的重载方法
     @Test
-    public void testFileReader1() {
+    public void testFileReader1() { // 实现读取操作
         FileReader fr = null;
         try {
             // 1.File类的实例化
@@ -138,7 +142,7 @@ public class FileReaderWriterTest {
      */
 
     @Test
-    public void testFileWriter() {
+    public void testFileWriter() { // 实现写入操作
         FileWriter fw = null;
         try {
             //1.提供File类的对象，指明写出到的文件
@@ -153,6 +157,7 @@ public class FileReaderWriterTest {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+
             //4.流资源的关闭
             if (fw != null) {
                 try {
@@ -165,7 +170,7 @@ public class FileReaderWriterTest {
     }
 
     @Test
-    public void testFileReaderFileWriter() {
+    public void testFileReaderFileWriter() { // 实现复制操作
         FileReader fr = null;
         FileWriter fw = null;
         try {
@@ -177,7 +182,6 @@ public class FileReaderWriterTest {
 //            File srcFile = new File("爱情与友情.jpg");
 //            File destFile = new File("爱情与友情1.jpg");
 
-
             // 2.创建输入流和输出流的对象
             fr = new FileReader(srcFile);
             fw = new FileWriter(destFile);
@@ -185,13 +189,14 @@ public class FileReaderWriterTest {
             // 3.数据的读入和写出操作
             char[] cbuf = new char[5];
             int len; // 记录每次读入到cbuf数组中的字符的个数
-            while ((len = fr.read(cbuf)) != -1) {
+            while ((len = fr.read(cbuf)) != -1) {  // 将数据读入到cubf中
                 // 每次写出len个字符
-                fw.write(cbuf, 0, len);
+                fw.write(cbuf, 0, len); // 从cubf中读取数据
             }
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
+
             // 4.关闭流资源
             //方式一：
 //            try {

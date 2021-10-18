@@ -20,8 +20,6 @@ public class DAOTest {
 
         StudentDAO dao2 = new StudentDAO();
         Student student = dao2.getIndex(1);
-
-
     }
 
 

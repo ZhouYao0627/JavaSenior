@@ -30,21 +30,21 @@ public class GenericTest {
 
         Object obj = null;
         String str = null;
-        obj = str;
+        obj = str; // 类层面的展示
 
         Object[] arr1 = null;
         String[] arr2 = null;
-        arr1 = arr2;
+        arr1 = arr2; // 数组层面的展示
 
-        //编译不通过
+        // 编译不通过
 //        Date date = new Date();
 //        str = date;
 
         List<Object> list1 = null;
-        List<String> list2 = new ArrayList<String>();
+        List<String> list2 = new ArrayList<>();
 
-        //此时的list1和list2的类型不具有子父类关系
-        //编译不通过
+        // 此时的list1和list2的类型不具有子父类关系
+        // 编译不通过
 //        list1 = list2;
 
         /*
@@ -55,7 +55,6 @@ public class GenericTest {
 
         show(list1);
         show1(list2);
-
     }
 
     public void show1(List<String> str) {
