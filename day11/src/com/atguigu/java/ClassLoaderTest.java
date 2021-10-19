@@ -38,8 +38,8 @@ public class ClassLoaderTest {
     public void test2() throws Exception {
 
         Properties pros = new Properties();
-        // 此时的文件默认在当前的module下。
         // 读取配置文件的方式一：
+        // 此时的文件默认在当前的module下。
 //        FileInputStream fis = new FileInputStream("jdbc.properties");
 //        FileInputStream fis = new FileInputStream("src\\jdbc1.properties");
 //        pros.load(fis);
@@ -49,6 +49,7 @@ public class ClassLoaderTest {
         ClassLoader classLoader = ClassLoaderTest.class.getClassLoader();
         InputStream is = classLoader.getResourceAsStream("jdbc1.properties");
         pros.load(is);
+
 
         String user = pros.getProperty("user");
         String password = pros.getProperty("password");

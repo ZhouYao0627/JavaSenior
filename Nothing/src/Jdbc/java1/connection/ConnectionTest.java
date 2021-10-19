@@ -3,7 +3,10 @@ package Jdbc.java1.connection;
 import org.junit.Test;
 
 import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.Driver;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.Properties;
 
 /**
@@ -12,85 +15,70 @@ import java.util.Properties;
  */
 public class ConnectionTest {
 
-//    @Test
-//    public void test1() throws Exception {
-//
-//        Driver driver = new com.mysql.jdbc.Driver();
-//
-//        // 注册
-//        DriverManager.registerDriver(driver);
-//
-//        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
-//        String user = "root";
-//        String passsword = "123456";
-//
-//        // 连接
-//        DriverManager.getConnection(url,user,passsword);
-//
-//
-//    }
+    // 1.
+    @Test
+    public void test1() throws SQLException {
 
-//    @Test
-//    public void test2() throws Exception {
-//
-//        String className = "com.mysql.jdbc.Driver";
-//        Class clazz = Class.forName(className);
-//
-//        Driver driver = (Driver) clazz.newInstance();
-//
-//        // 注册驱动
-//        DriverManager.registerDriver(driver);
-//
-//        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
-//        String user = "root";
-//        String password = "123456";
-//
-//
-//        // 获取连接
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        System.out.println(connection);
-//    }
+        java.sql.Driver driver = new com.mysql.jdbc.Driver();
 
+        DriverManager.registerDriver(driver);
 
-//    @Test
-//    public void test3() throws Exception {
-//
-//        String className = "com.mysql.jdbc.Driver";
-//        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
-//        String user = "root";
-//        String password = "123456";
-//
-//        // 加载驱动
-//        Class.forName(className);
-//
-//
-//        // 获取连接
-//        Connection connection = DriverManager.getConnection(url, user, password);
-//        System.out.println(connection);
-//    }
+        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
+        String user = "root";
+        String password = "123456";
+
+        Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
+    }
+
+    @Test
+    public void test2() throws Exception {
+
+        String className = "";
+        Class clazz = Class.forName(className);
+        Driver driver = (Driver) clazz.getDeclaredConstructor().newInstance();
+
+        DriverManager.registerDriver(driver);
+
+        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
+        String user = "root";
+        String password = "123456";
+
+        Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
+    }
+
+    @Test
+    public void test3() throws Exception {
+
+        String className = "";
+        Class.forName(className);
+
+        String url = "jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8";
+        String user = "root";
+        String password = "123456";
+
+        Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
+    }
 
     @Test
     public void test4() throws Exception {
 
         Properties pros = new Properties();
 
-        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("");
+        InputStream is = ClassLoader.getSystemClassLoader().getResourceAsStream("jdbc.properties");
+
         pros.load(is);
 
-        String className = pros.getProperty("");
-        String url = pros.getProperty("");
-        String user = pros.getProperty("");
-        String password = pros.getProperty("");
+        String className = pros.getProperty("className");
+        String url = pros.getProperty("url");
+        String user = pros.getProperty("user");
+        String password = pros.getProperty("password");
 
-        // 加载驱动
-        Class.forName(className);
-
-        // 建立连接
-        DriverManager.getConnection(url,user,password);
+        Connection connection = DriverManager.getConnection(url, user, password);
+        System.out.println(connection);
     }
-
-
-
 
 
 }

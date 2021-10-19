@@ -91,8 +91,11 @@ public class ConnectionTest {
         String user = "root";
         String password = "123456";
 
-        /* 这两行也可以不写，但仅限于Mysql，通用情况下不行，这里可以是因为
-        jdbc0419->lib->mysql-connector-java-5.1.7-bin.jar->META-INF->services->java.sql.jdbc里写有一句话，
+        /*
+        String className = "com.mysql.jdbc.Driver";
+        Class.forName(className);
+        上面这两行也可以不写，但仅限于Mysql，通用情况下不行，这里可以是因为
+        jdbc0419->lib->mysql-connector-java-5.1.7-bin.jar->META-INF->services->java.sql.jdbc里写有一句话:
         com.mysql.jdbc.Driver，在获取连接之前，会自动找这个文件中的路径，然后把文件对应的路径给加载了
         */
         // 2.加载驱动

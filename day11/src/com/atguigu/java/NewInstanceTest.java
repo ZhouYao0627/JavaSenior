@@ -5,7 +5,7 @@ import org.junit.Test;
 import java.util.Random;
 
 /**
- * 通过发射创建对应的运行时类的对象
+ * 通过反射创建对应的运行时类的对象
  *
  * @author：ZhouYao
  * @create：2021-07-23 16:39
@@ -13,7 +13,7 @@ import java.util.Random;
 public class NewInstanceTest {
 
     @Test
-    public void test1() throws InstantiationException, IllegalAccessException {
+    public void test1() throws Exception {
 
         Class<Person> clazz = Person.class;
         /*

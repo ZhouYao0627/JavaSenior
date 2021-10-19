@@ -6,6 +6,7 @@ import org.junit.Test;
 
 import javax.sql.DataSource;
 import java.io.InputStream;
+import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Properties;
 
@@ -20,12 +21,13 @@ public class DruidTest {
 
         DruidDataSource source = new DruidDataSource();
 
-        source.setUsername("root");
-        source.setPassword("123456");
-        source.setUrl("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf8");
-        source.setDriverClassName("com.mysql.jdbc.Driver");
+        source.setUsername("");
+        source.setPassword("");
+        source.setUrl("");
+        source.setDriverClassName("");
 
-        source.getConnection();
+        Connection connection = source.getConnection();
+        System.out.println(connection);
     }
 
     @Test
@@ -37,9 +39,8 @@ public class DruidTest {
         pros.load(is);
 
         DataSource dataSource = DruidDataSourceFactory.createDataSource(pros);
-        dataSource.getConnection();
+        System.out.println(dataSource.getConnection());
     }
-
 
 
 }

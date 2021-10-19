@@ -50,12 +50,13 @@ public class ReflectionTest {
     @Test
     public void testField1() throws Exception {
 
+        // 获取Class的实例
         Class clazz = Person.class;
 
         // 创建运行时类的对象
         Person p = (Person) clazz.newInstance();
 
-        // 1. getDeclaredField(String fieldName):获取运行时类中指定变量名的属性
+        // 1.getDeclaredField(String fieldName):获取运行时类中指定变量名的属性
         Field name = clazz.getDeclaredField("name");
 
         // 2.保证当前属性是可访问的
@@ -93,7 +94,7 @@ public class ReflectionTest {
                               参数2：给方法形参赋值的实参
         invoke()的返回值即为对应类中调用的方法的返回值。
         */
-        Object returnValue = show.invoke(p, "CHN");// String nation = p.show("CHN");
+        Object returnValue = show.invoke(p, "CHN"); // String nation = p.show("CHN");
         System.out.println(returnValue);
 
         System.out.println("*************如何调用静态方法*****************");
@@ -103,8 +104,8 @@ public class ReflectionTest {
         Method showDesc = clazz.getDeclaredMethod("showDesc");
         showDesc.setAccessible(true);
         // 如果调用的运行时类中的方法没有返回值，则此invoke()返回null
-//        Object returnVal = showDesc.invoke(Person.class);
-        Object returnVal = showDesc.invoke(null);
+        Object returnVal = showDesc.invoke(Person.class);
+//        Object returnVal = showDesc.invoke(null);
         System.out.println(returnVal); // null
     }
 

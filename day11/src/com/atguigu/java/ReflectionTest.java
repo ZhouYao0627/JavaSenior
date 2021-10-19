@@ -80,14 +80,11 @@ public class ReflectionTest {
     /* ★★★
     关于java.lang.Class类的理解
     1.类的加载过程：
-    程序经过javac.exe命令以后，会生成一个或多个字节码文件(.class结尾)。
-    接着我们使用java.exe命令对某个字节码文件进行解释运行。相当于将某个字节码文件加载到内存中。
-    此过程就称为类的加载。
-    加载到内存中的类，我们就称为运行时类，此运行时类，就作为Class的一个实例。
-
+      程序经过javac.exe命令以后，会生成一个或多个字节码文件(.class结尾)。
+      接着我们使用java.exe命令对某个字节码文件进行解释运行。相当于将某个字节码文件加载到内存中。--> 此过程就称为类的加载。
+      加载到内存中的类，我们就称为运行时类，此运行时类，就作为Class的一个实例。
     2.换句话说，Class的实例就对应着一个运行时类。
-    3.加载到内存中的运行时类，会缓存一定的时间。在此时间之内，我们可以通过不同的方式
-    来获取此运行时类。
+    3.加载到内存中的运行时类，会缓存一定的时间。在此时间之内，我们可以通过不同的方式来获取此运行时类。
     */
 
     // 获取Class的实例的方式（前三种方式需要掌握）
@@ -102,7 +99,7 @@ public class ReflectionTest {
         Class clazz2 = p1.getClass();
         System.out.println("2 " + clazz2);
 
-        // 方式三：调用Class的静态方法：forName(String classpath) ---> 稍微多一些
+        // 方式三：调用Class的静态方法：forName(String classpath) ---> 用的稍微多一些
         Class clazz3 = Class.forName("com.atguigu.java.Person");
 //        clazz3 = Class.forName("java.lang.String");
         System.out.println("3 " + clazz3);
