@@ -16,6 +16,7 @@ public class QueryTest {
     /*
      * 查询order表中的一条记录，返回Order类的一个对象
      *
+     * 关键是解决字段名与属性名不一致的情况
      */
     @Test
     public void test1() throws Exception {

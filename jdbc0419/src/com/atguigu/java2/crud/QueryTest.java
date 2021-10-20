@@ -14,6 +14,21 @@ import java.util.Map;
 /**
  * 测试数据表的查询操作
  *
+ * 步骤：
+ * 1.获取数据库的连接
+ * 2.提供一个添包含占位符的sql
+ * 3.创建QueryRunner的实例
+ * 4.通过QueryRunner的实例，调用其query()
+ * 5.资源的关闭
+ *
+ * BeanHandler:对应查询表中的[一条]记录，以对象的方式返回
+ * BeanListHandler:对应查询表中的[多条]记录，以对象构成的集合的方式返回
+ * MapHandler:对应查询表中的[一条]记录，以map对象的方式返回。
+ *            map中key为表中的字段名，map中value为表中一条数据的数据值。
+ * MapListHandler:对应查询表中的[多条]记录，以map对象构成的List的方式返回。
+ *                map中key为表中的字段名，map中value为表中一条数据的数据值。
+ * ScalarHandler:用于查询表中的[特殊值]。比如：count(*)、max(xxx)
+ *
  * @author：ZhouYao
  * @create：2021-08-04 11:23
  */
@@ -148,7 +163,7 @@ public class QueryTest {
      * ScalarHandler:用于查询表中的特殊值。比如：count(*) 、 max(xxx)
      */
     @Test
-    public void test5(){
+    public void test5() {
         Connection connection = null;
 
         try {
@@ -175,7 +190,7 @@ public class QueryTest {
     }
 
     @Test
-    public void test6(){
+    public void test6() {
         Connection connection = null;
 
         try {
@@ -197,7 +212,6 @@ public class QueryTest {
             JDBCUtils.close(connection);
         }
     }
-
 
 
 }

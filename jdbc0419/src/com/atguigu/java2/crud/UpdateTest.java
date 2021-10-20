@@ -10,6 +10,12 @@ import java.sql.Date;
 /**
  * 测试向数据表中添加、删除、修改数据
  *
+ * 步骤：
+ * 1.获取数据库的连接
+ * 2.提供一个添包含占位符的sql
+ * 3.使用提供好的QueryRunner，调用update()方法，实现数据的插入
+ * 4.资源的关闭
+ *
  * @author：ZhouYao
  * @create：2021-08-04 10:23
  */
@@ -55,7 +61,7 @@ public class UpdateTest {
             // 3.使用提供好的QueryRunner，调用update()方法，实现数据的插入
             QueryRunner runner = new QueryRunner();
 
-            int count = runner.update(connection, sql,"王亮","wangl@126.com",new Date(23423423432423L)); // 这里传入的是毫秒数
+            int count = runner.update(connection, sql, "王亮", "wangl@126.com", new Date(23423423432423L)); // 这里传入的是毫秒数
             System.out.println("添加了" + count + "条记录");
 
         } catch (Exception e) {
@@ -68,7 +74,7 @@ public class UpdateTest {
 
     // 删除记录的操作
     @Test
-    public void test3(){
+    public void test3() {
         Connection connection = null;
 
         try {
@@ -80,7 +86,7 @@ public class UpdateTest {
 
             // 3.使用提供好的QueryRunner，调用update()方法，实现数据的插入
             QueryRunner runner = new QueryRunner();
-            int count = runner.update(connection, sql,19);
+            int count = runner.update(connection, sql, 19);
             System.out.println("删除了" + count + "条记录");
         } catch (Exception e) {
             e.printStackTrace();
@@ -92,7 +98,7 @@ public class UpdateTest {
 
     // 修改表数据的操作
     @Test
-    public void test4(){
+    public void test4() {
         Connection connection = null;
 
         try {
@@ -104,7 +110,7 @@ public class UpdateTest {
 
             // 3.使用提供好的QueryRunner，调用update()方法，实现数据的插入
             QueryRunner runner = new QueryRunner();
-            int count = runner.update(connection, sql,"tom@gmail.com",19);
+            int count = runner.update(connection, sql, "tom@gmail.com", 19);
             System.out.println("修改了" + count + "条记录");
 
         } catch (Exception e) {

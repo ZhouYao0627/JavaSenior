@@ -49,7 +49,6 @@ public class DruidTest {
 
         // 获取连接池中的一个数据库连接
         Connection connection = source.getConnection();
-
         System.out.println(connection);
     }
 
