@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
+ * 这里是对Customer最基本的操作，在接口中先定义抽象方法，然后在CustomerDAOImpl中具体实现
+ *
  * @author：ZhouYao
  * @create：2021-08-04 16:03
  */
@@ -27,7 +29,6 @@ public interface CustomerDAO {
 
     /**
      * 修改表中的一条记录
-     *
      * Customer cust = new Customer(10,"张哲","zhang@126.com",new Date(123123L));
      *
      * @param connection：数据库的连接

@@ -6,6 +6,8 @@ import java.sql.SQLException;
 import java.util.List;
 
 /**
+ * 抽象方法的具体实现
+ *
  * @author：ZhouYao
  * @create：2021-08-04 16:04
  */

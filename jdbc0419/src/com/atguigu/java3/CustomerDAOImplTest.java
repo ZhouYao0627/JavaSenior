@@ -8,6 +8,8 @@ import java.sql.Date;
 import java.util.List;
 
 /**
+ * 对Customer的测试
+ *
  * @author：ZhouYao
  * @create：2021-08-04 16:05
  */
@@ -21,8 +23,10 @@ public class CustomerDAOImplTest {
             CustomerDAOImpl imp1 = new CustomerDAOImpl();
             List<Customer> list = imp1.getAll(connection);
 
-            for (Customer customer : list)
-                System.out.println(customer); // 省略了toString也可以
+//            for (Customer customer : list)
+//                System.out.println(customer); // 省略了toString也可以
+            list.forEach(System.out::println);
+
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

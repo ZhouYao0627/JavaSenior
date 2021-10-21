@@ -16,7 +16,7 @@ import java.util.Map;
  *
  * 步骤：
  * 1.获取数据库的连接
- * 2.提供一个添包含占位符的sql
+ * 2.提供一个包含占位符的sql
  * 3.创建QueryRunner的实例
  * 4.通过QueryRunner的实例，调用其query()
  * 5.资源的关闭
